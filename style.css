@@ -1,0 +1,188 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "montserrat", sans-serif;
+  background: url(img/background.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.logo{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+
+}
+
+.btn {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: rgba(227, 105, 141, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.btn i {
+  line-height: 90px;
+  font-size: 26px;
+  transition: .2s linear;
+}
+
+.btn:hover i {
+  transform: scale(1.6);
+  color: #f1f1f1;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: rgba(227, 105, 141, .6);
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%
+}
+.btn:hover::before {
+  animation: animation .7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes animation{
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100%{
+    left: -10%;
+    top: -10%;
+  }
+}
+
+.middle {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.middle h1, .middle h2 {
+  font-size: 7em;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: rgba(227, 105, 141, .3);
+  background-image: url(img/10.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: water 120s infinite;
+}
+
+@keyframes water{
+    from{
+      background-position: left 0 bottom 0px;
+    }
+    to {
+      background-position: left 40px top 0px;
+    }
+  }
+
+  /* Media */
+  @media (min-width:320px) and (max-width: 424px) {
+    .body {
+      background-position-x: -260px;
+    }
+    .logo{
+      right: 5%;
+      top: 5%;
+    }
+    .btn{
+      width: 50px;
+      height: 50px;
+      margin: 0;
+    }
+    .btn:hover i{
+      transform: scale(1.3);
+    }
+    .btn i {
+      line-height: 50px;
+    }
+    .middle{
+      top: 62.5%;
+    }
+    .middle h1 {
+      font-size: 2.5em;
+    }
+    .middle h2 {
+      font-size: 5em;
+    }
+  }
+  @media (min-width:425px) and (max-width: 569px){
+    .body {
+      background-position-x: -325px;
+    }
+    .logo{
+      right: 5%;
+      top: 3%;
+    }
+    .btn{
+      margin: 0;
+    }
+    .middle h1, .middle h2 {
+      font-size: 3.5em;
+    }
+  }
+  @media (min-width:570px) and (max-width: 767px){
+    .body {
+      background-position-x: 105px;
+    }
+    .logo{
+      right: 5%;
+      top: 5%;
+    }
+    .btn {
+      margin: 0;
+    }
+    .middle{
+      top: 59%;
+    }
+    .middle h1, .middle h2 {
+      font-size: 5em;
+    }
+  } 
+
+  @media (min-width:768px) and (max-width:1023px){
+    .body {
+      background-position-x: -105px;
+    }
+    .middle{
+      top: 65%;
+    }
+    .middle h1, .middle h2 {
+      font-size: 6em;
+    }
+    .logo{
+      right: 5%;
+      top: 5%;
+    }
+  } 
+
+  @media (min-width:1024px) and (max-width:1200px){
+    .logo{
+      right: 5%;
+      top: 5%;
+    }
+  }
